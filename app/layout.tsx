@@ -39,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div id="root">
           <UserProvider>
             <Nav />
-            {children}
+            <main className="av-main">{children}</main>
           </UserProvider>
         </div>
       </body>
