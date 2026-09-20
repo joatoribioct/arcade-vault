@@ -10,12 +10,7 @@ Arcade Vault — a platform for playing games online and competing for the highe
 
 This project uses **Next.js 16.3.5** (App Router) with **React 19.2.8** — both newer than your training data. Per AGENTS.md, consult `node_modules/next/dist/docs/` for current APIs and conventions before implementing anything Next.js-related; do not rely on remembered Next.js behavior.
 
-## Commands
-
-- `npm run dev` — start the dev server (this is also what regenerates the AGENTS.md breaking-changes block).
-- `npm run build` — production build.
-- `npm run start` — run the production build.
-- `npm run lint` — ESLint via the flat config in `eslint.config.mjs` (extends `eslint-config-next`'s core-web-vitals and typescript rule sets).
+config.mjs` (extends `eslint-config-next`'s core-web-vitals and typescript rule sets).
 
 There is no test runner configured yet — do not assume Jest/Vitest/etc. is present.
 
@@ -30,3 +25,7 @@ There is no test runner configured yet — do not assume Jest/Vitest/etc. is pre
 ## Workflow
 
 Per README.md, this project follows a **Spec Driven Design** workflow using `/spec` and `/spec-impl`, based on the practices at https://github.com/Klerith/fernando-skills, installed via `npx skills@latest add Klerith/fernando-skills`. Those skills are not yet installed in this checkout (no `.claude/skills` present) — if spec/spec-impl commands are invoked and unavailable, the user may need to run that install command first.
+
+
+## Skills
+Usa siempre /frontend-design para diseñar el fronted y interfaces de usuario

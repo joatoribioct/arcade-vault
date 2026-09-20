@@ -15,4 +15,9 @@ https://github.com/Klerith/fernando-skills
 npx skills@latest add Klerith/fernando-skills
 ```
 
-## Hola Mundo
+## Commands
+
+- `npm run dev` — start the dev server (this is also what regenerates the AGENTS.md breaking-changes block).
+- `npm run build` — production build.
+- `npm run start` — run the production build.
+- `npm run lint` — ESLint via the flat config in `eslint.
