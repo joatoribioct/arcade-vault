@@ -6,13 +6,24 @@ import type { User } from "./data/types";
 const STORAGE_KEY = "av_user";
 const listeners = new Set<() => void>();
 
+let cachedRaw: string | null | undefined;
+let cachedUser: User | null = null;
+
 function readUser(): User | null {
+  let raw: string | null;
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as User) : null;
+    raw = localStorage.getItem(STORAGE_KEY);
   } catch {
-    return null;
+    raw = null;
   }
+  if (raw === cachedRaw) return cachedUser;
+  cachedRaw = raw;
+  try {
+    cachedUser = raw ? (JSON.parse(raw) as User) : null;
+  } catch {
+    cachedUser = null;
+  }
+  return cachedUser;
 }
 
 function getServerUser(): User | null {
