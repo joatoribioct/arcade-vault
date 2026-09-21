@@ -1,6 +1,6 @@
 # 01 — MVP Pantallas Visuales
 
-- **Estado:** aprobado
+- **Estado:** Implementado
 - **Depende de:** Ninguno
 - **Fecha:** 2026-09-19
 
