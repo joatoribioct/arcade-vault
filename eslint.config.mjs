@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Static reference templates (plain browser scripts, not app source):
+    "references/**",
   ]),
 ]);
 
