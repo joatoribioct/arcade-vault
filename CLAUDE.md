@@ -60,6 +60,10 @@ Per README.md the project uses `/spec` and `/spec-impl` from https://github.com/
 - `spec-impl` — implement an approved spec.
 - `frontend-design` — **always use `/frontend-design` to design the frontend and user interfaces.**
 
+## Agents (`.claude/agents`)
+
+- `game-planner` — plans and decides which new game fits the platform (scores candidates against the catalog in `app/data/games.ts`). Keeps a persistent project memory of past suggestions and their status (sugerido/aceptado/descartado/implementado) in `.claude/agent-memory/game-planner/MEMORY.md`.
+
 ## Hooks
 
 `.claude/settings.json` registers a `PostToolUse` hook on `Write|Edit` that runs `.claude/hooks/format-and-lint.mjs`: Prettier (`--write`) and then ESLint on the edited file (skips `node_modules`, `.next`, `out`, `build`, `references` and files outside the project). `.claude/settings.local.json` pre-allows `npx tsc`, `npx next`, `npm run`, `npm i` and `git push`.
